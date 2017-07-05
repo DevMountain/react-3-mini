@@ -1,0 +1,6 @@
+{
+  "/undead/minions": "/undead_minions",
+  "/barbarian/minions": "/barbarian_minions",
+  "/goblin/minions": "/goblin_minions",
+  "/all": "/db"
+}

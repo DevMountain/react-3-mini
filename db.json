@@ -1,0 +1,190 @@
+{
+  "defenses": [
+    {
+      "id": 0,
+      "recruit": "Bill the Archer"
+    }
+  ],
+  "undead": [
+    {
+      "id": 1,
+      "name": "Undead Army",
+      "shortname": "undead",
+      "leader": "Pumpkin King"
+    }
+  ],
+  "undead_minions": [
+    {
+      "id": 1,
+      "type": "Skeleton"
+    },
+    {
+      "id": 2,
+      "type": "Necromancer"
+    },
+    {
+      "id": 3,
+      "type": "Zombie Archer"
+    },
+    {
+      "id": 4,
+      "type": "Zombie"
+    },
+    {
+      "id": 5,
+      "type": "Zombie"
+    },
+    {
+      "id": 6,
+      "type": "Skeleton"
+    },
+    {
+      "id": 7,
+      "type": "Skeleton Archer"
+    },
+    {
+      "id": 8,
+      "type": "Skeleton Archer"
+    },
+    {
+      "id": 9,
+      "type": "Necromancer"
+    },
+    {
+      "id": 10,
+      "type": "Lich"
+    },
+    {
+      "id": 11,
+      "type": "Lich"
+    }
+  ],
+  "barbarian": [
+    {
+      "id": 2,
+      "name": "Barbarian Horde",
+      "shortname": "barbarian",
+      "leader": "Barbarian Warlord"
+    }
+  ],
+  "barbarian_minions": [
+    {
+      "id": 1,
+      "type": "Barbarian"
+    },
+    {
+      "id": 2,
+      "type": "Barbarian"
+    },
+    {
+      "id": 3,
+      "type": "Barbarian"
+    },
+    {
+      "id": 4,
+      "type": "Barbarian"
+    },
+    {
+      "id": 5,
+      "type": "Barbarian"
+    },
+    {
+      "id": 6,
+      "type": "Barbarian"
+    },
+    {
+      "id": 7,
+      "type": "Barbarian"
+    },
+    {
+      "id": 8,
+      "type": "Barbarian"
+    },
+    {
+      "id": 9,
+      "type": "Barbarian"
+    },
+    {
+      "id": 10,
+      "type": "Barbarian"
+    },
+    {
+      "id": 11,
+      "type": "Barbarian"
+    },
+    {
+      "id": 12,
+      "type": "Barbarian"
+    },
+    {
+      "id": 13,
+      "type": "Barbarian"
+    },
+    {
+      "id": 14,
+      "type": "Barbarian"
+    },
+    {
+      "id": 15,
+      "type": "Barbarian"
+    },
+    {
+      "id": 16,
+      "type": "Barbarian"
+    },
+    {
+      "id": 17,
+      "type": "Barbarian"
+    },
+    {
+      "id": 18,
+      "type": "Barbarian"
+    },
+    {
+      "id": 19,
+      "type": "Barbarian"
+    },
+    {
+      "id": 20,
+      "type": "Barbarian"
+    }
+  ],
+  "goblin": [
+    {
+      "id": 3,
+      "name": "Great Goblin Family",
+      "shortname": "goblin",
+      "leader": "Grandma Gob"
+    }
+  ],
+  "goblin_minions": [
+    {
+      "id": 1,
+      "type": "Goblin"
+    },
+    {
+      "id": 2,
+      "type": "Goblin"
+    },
+    {
+      "id": 3,
+      "type": "Goblin"
+    },
+    {
+      "id": 4,
+      "type": "Goblin"
+    },
+    {
+      "id": 5,
+      "type": "Goblin"
+    },
+    {
+      "id": 6,
+      "type": "Goblin"
+    },
+    {
+      "id": 7,
+      "type": "Angry Pixie (adopted)"
+    }
+  ]
+}
