@@ -1,0 +1,181 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+  App styles
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.App {
+  background-color: #444;
+  text-align: center;
+  min-height: 100vh;
+}
+
+#message {
+  font-size: 4em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+  Defenses
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.App-header {
+  background-color: indianred;
+  height: 233px;
+  padding: 10px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.defense {
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  min-width: 50px;
+  padding: 20px;
+  background-color: RGBA(57, 71, 177, 1.00);
+  border: solid 4px RGBA(17, 43, 137, 1.00);
+  border-radius: 4px 4px 50px 50px;
+  transform: rotateZ(7deg);
+  margin: 10px 20px;
+}
+.defense:hover .instructions {
+  visibility: visible;
+}
+#sentry:hover {
+  box-shadow: 0px 0px 2px 4px white;
+  cursor: pointer;
+}
+
+.instructions {
+  margin-top: 10px;
+  min-width: 90px;
+  padding: 7px;
+  border-radius: 8px;
+  background-color: white;
+  color: indianred;
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  width: 80px;
+  top: 50px;
+  left: -70px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+  Troops
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.reinforcements {
+  background-color: indianred;
+  color: white;
+  min-height: 150px;
+  position: relative;
+}
+
+#paperwork, #paperwork + button {
+  margin: 20px;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: RGBA(57, 71, 177, 1.00);
+  border: solid 3px RGBA(17, 43, 137, 1.00);
+  color: white;
+  outline: none;
+}
+#paperwork::-webkit-input-placeholder {
+  color: RGBA(147, 163, 255, 1.00);
+}
+
+form {
+  display: block;
+}
+input {
+  min-width: 230px;
+}
+
+button {
+  border-radius: 10px;
+}
+button:hover {
+  box-shadow: 0px 0px 2px 2px white;
+  cursor: pointer;
+}
+
+.troops {
+  display: inline;
+}
+.troop {
+  background-color: RGBA(137, 20, 17, 1.00);
+  list-style: none;
+  padding: 13px;
+  border-radius: 0 10px 0 10px;
+  display: inline-block;
+  margin: 10px -12px 10px -12px;
+}
+
+#wall {
+  height: 33px;
+  width: 100vw;
+  border-top: 7px solid RGBA(107, 3, 7, 1.00);
+  background-color: RGBA(137, 20, 17, 1.00);
+  margin-top: 30px;
+}
+#gate {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 0px;
+  height: 43px;
+  width: 200px;
+  background-color: RGBA(137, 20, 17, 1.00);
+  border-top: 7px solid RGBA(107, 3, 7, 1.00);
+  border-left: 7px solid RGBA(107, 3, 7, 1.00);
+  border-right: 7px solid RGBA(107, 3, 7, 1.00);
+  border-radius: 50% 50% 0 0;
+}
+#gate:before {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 7px;
+  background-color: RGBA(107, 3, 7, 1.00);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+  Enemies
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.enemies {
+  position: relative;
+  width: 100vw;
+}
+
+.army {
+  margin-bottom: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-top: solid 2px #333;
+}
+.army h3 {
+  color: RGBA(94, 198, 150, 1.00);
+}
+
+.leader {
+  cursor: sw-resize;
+  font-size: 1.9em;
+  font-weight: bold;
+  width: 200px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 12px 8px;
+  margin-bottom: 10px;
+  color: RGBA(94, 198, 150, 1.00);
+  border: medium solid RGBA(94, 198, 150, 1.00);
+  border-radius: 20px;
+}
+
+.minion {
+  display: inline-block;
+  cursor: cell;
+  padding: 14px;
+  border-radius: 18px;
+  margin: 0 12px 10px 12px;
+  background-color: RGBA(94, 198, 150, 1.00);
+}

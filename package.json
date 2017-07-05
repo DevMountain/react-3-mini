@@ -1,0 +1,32 @@
+{
+  "name": "http-mini",
+  "version": "1.0.0",
+  "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "api": "json-server --watch db.json --port 3005 --routes routes.json --delay 500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMountain/http-mini.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevMountain/http-mini/issues"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.10.1",
+    "react-scripts": "1.0.7"
+  },
+  "homepage": "https://github.com/DevMountain/http-mini#readme"
+}
+
