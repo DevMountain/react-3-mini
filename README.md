@@ -10,13 +10,11 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
 
 * Open a terminal window:
   * `Fork` and `clone` this repository.
-  * `cd` into the `rpg` project directory.
   * Run `npm i` to install dependencies.
   * Run `npm start` to spin up the development server.
 * In a second terminal window:
-  * `cd` into the `rpg` project directory.
   * Run `npm run api`. This will run a script in the package.json file that will run json-server, point to our API file, and set a port. The API has been set up to have a short delay.
-* You should now have two processes running in two separate terminal windows. Open a third window and run `npm install axios`. You can also use this third window if you want to commit any changes as you go, but keep the first two window running your app and your api.
+* You should now have two processes running in two separate terminal windows. Open a third window and run `npm install axios`. You can also use this third window if you want to commit any changes as you go, but keep the first two windows running your app and your api.
 
 ## Step 1: getEnemies request
 
@@ -91,7 +89,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
   ### Instructions
   Part 1
   * Our service is set up, but we need our front end to call a function to trigger our service function, and we need to create a place for the information to be displayed in the view.
-  * Create a constructor function. On state, create a property called `armiesArray` and set it equal to an empty array. When the API is called and an array of enemies is returned, we will use `armiesArray` to store and display that data, mapping through array to show each item.
+  * Create a constructor function. On state, create a property called `armiesArray` and set it equal to an empty array. When the API is called and an array of enemies is returned, we will use `armiesArray` to store and display that data, mapping through the array to show each item.
 
   Part 2
   * In the App components's `render` method, use the `map()` method to map over the `armiesArray` on state.
@@ -582,7 +580,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
   * Before writing this method, import the `postTroop` function into `App.js`.
   * Now the `recruitTroop` method already exists, but it needs to be fleshed out. Start by passing in two parameters: `event` and `recruit`. They represent, respectively, the event occurring when a form is submitted and the string value which is entered into the form input. More on those in just a minute.
   * In the `recruitTroop()` method, call `postTroop`. Pass in the same `recruit` variable just mentioned.
-    * The callback called a previous method we made, `callTroops`. That way, as soon as we post a new recruit, we make a request to the API to return all troops, ensuring they all appear in the view.
+    * Let's have the callback in the .then() invoke the `callTroops` method we made previously. That way, as soon as we are done posting a new recruit, we then make a request to the API to return all troops, ensuring we get an updated list in the view.
     * If someone decides to hit the Enlist button without filling out the form, we don't want a bunch of empty objects appearing where soldiers should be. So let's test for empty strings by wrapping the call to our `postTroop` service function in an `if` statement.
       * We can simply test the truthiness of `recruit`, since `recruit` is a string and non-empty strings are truthy and empty strings are falsy. If `recruit` is a non-empty string, `postTroop` will be called to post the new recruit.
       * If the `if` statement passes and a new recruit is submitted, it might be nice to automatically clear out the form to allow something new to be typed.
@@ -601,7 +599,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
           </details>
 
   Our second method is a simple method for handling what is typed into the input.
-  * Call the method `handleInput`. Pass in `event`. Here, `event` represents the event of something being typed into the input. It occurs every time a new character is typed.
+  * Name the method `handleInput`. Pass in `event`. Here, `event` represents the event of something being typed into the input. It occurs every time a new character is typed.
   * Inside the method, set the state, changing the value of `newRecruit` (which starts as an empty string if you recall) to the value currently typed into the input. Use `target.value`.
     <details> <summary> <code> handleInput </code> </summary>
 
@@ -636,7 +634,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
     </details>
 
     * I told you we would come back to the importance of `event` and `recruit` when we were setting up our `recruitTroop` method. We need to pass in the recruit value so it can be passed to our service function to become the value of the request object, which is then sent to the API database.
-    * We need to pass in the event because we need our `recruitTroop` method to prevent a default action performed by submit buttons which causes the page to refresh. If you have everything working a this point, you may have noticed that requesting a new troop causes the enemy armies to disappear. That is because clicking the submit button refreshes the view. To prevent that, simply call the `preventDefault()` method on the `event` passed into the `recruitTroop` method. Do this at the top of the method's code block.
+    * We need to pass in the event because we need our `recruitTroop` method to prevent a default action performed by submit buttons which causes the page to refresh. If you have everything working at this point, you may have noticed that requesting a new troop causes the enemy armies to disappear. That is because clicking the submit button refreshes the view. To prevent that, simply call the `preventDefault()` method on the `event` passed into the `recruitTroop` method. Do this at the top of the method's code block.
 
     <details> <summary> <code> updated recruitTroop method </code> </summary>
 
