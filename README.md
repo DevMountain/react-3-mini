@@ -10,13 +10,11 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
 
 * Open a terminal window:
   * `Fork` and `clone` this repository.
-  * `cd` into the `rpg` project directory.
   * Run `npm i` to install dependencies.
   * Run `npm start` to spin up the development server.
 * In a second terminal window:
-  * `cd` into the `rpg` project directory.
   * Run `npm run api`. This will run a script in the package.json file that will run json-server, point to our API file, and set a port. The API has been set up to have a short delay.
-* You should now have two processes running in two separate terminal windows. Open a third window and run `npm install axios`. You can also use this third window if you want to commit any changes as you go, but keep the first two window running your app and your api.
+* You should now have two processes running in two separate terminal windows. Open a third window and run `npm install axios`. You can also use this third window if you want to commit any changes as you go, but keep the first two windows running your app and your api.
 
 ## Step 1: getEnemies request
 
@@ -91,7 +89,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
   ### Instructions
   Part 1
   * Our service is set up, but we need our front end to call a function to trigger our service function, and we need to create a place for the information to be displayed in the view.
-  * Create a constructor function. On state, create a property called `armiesArray` and set it equal to an empty array. When the API is called and an array of enemies is returned, we will use `armiesArray` to store and display that data, mapping through array to show each item.
+  * Create a constructor function. On state, create a property called `armiesArray` and set it equal to an empty array. When the API is called and an array of enemies is returned, we will use `armiesArray` to store and display that data, mapping through the array to show each item.
 
   Part 2
   * In the App components's `render` method, use the `map()` method to map over the `armiesArray` on state.
