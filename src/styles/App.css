@@ -105,7 +105,8 @@ button:hover {
   padding: 13px;
   border-radius: 0 10px 0 10px;
   display: inline-block;
-  margin: 10px -12px 10px -12px;
+  margin: 10px 12px 10px 12px;
+  color: white;
 }
 
 #wall {
