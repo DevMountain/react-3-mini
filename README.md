@@ -580,7 +580,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
   * Before writing this method, import the `postTroop` function into `App.js`.
   * Now the `recruitTroop` method already exists, but it needs to be fleshed out. Start by passing in two parameters: `event` and `recruit`. They represent, respectively, the event occurring when a form is submitted and the string value which is entered into the form input. More on those in just a minute.
   * In the `recruitTroop()` method, call `postTroop`. Pass in the same `recruit` variable just mentioned.
-    * The callback called a previous method we made, `callTroops`. That way, as soon as we post a new recruit, we make a request to the API to return all troops, ensuring they all appear in the view.
+    * Let's have the callback in the .then() invoke the `callTroops` method we made previously. That way, as soon as we are done posting a new recruit, we then make a request to the API to return all troops, ensuring we get an updated list in the view.
     * If someone decides to hit the Enlist button without filling out the form, we don't want a bunch of empty objects appearing where soldiers should be. So let's test for empty strings by wrapping the call to our `postTroop` service function in an `if` statement.
       * We can simply test the truthiness of `recruit`, since `recruit` is a string and non-empty strings are truthy and empty strings are falsy. If `recruit` is a non-empty string, `postTroop` will be called to post the new recruit.
       * If the `if` statement passes and a new recruit is submitted, it might be nice to automatically clear out the form to allow something new to be typed.
@@ -599,7 +599,7 @@ ENEMIES AT OUR GATE! In this mini project we will use `axios` to make requests t
           </details>
 
   Our second method is a simple method for handling what is typed into the input.
-  * Call the method `handleInput`. Pass in `event`. Here, `event` represents the event of something being typed into the input. It occurs every time a new character is typed.
+  * Name the method `handleInput`. Pass in `event`. Here, `event` represents the event of something being typed into the input. It occurs every time a new character is typed.
   * Inside the method, set the state, changing the value of `newRecruit` (which starts as an empty string if you recall) to the value currently typed into the input. Use `target.value`.
     <details> <summary> <code> handleInput </code> </summary>
 
