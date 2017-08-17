@@ -64,3 +64,17 @@ h3 {
   color: #323231;
 }
 
+.btn-inp {
+  height: 23px;
+  padding: 0px 10px;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  border-left: 1px solid black;
+  background: #E0E1E2;
+  color: #323231;
+  transition: .2s;
+  margin-top: 1px;
+  margin-left: -41px;
+  cursor: pointer;
+}
+
