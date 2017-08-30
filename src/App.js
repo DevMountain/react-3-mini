@@ -99,7 +99,7 @@ byYear() {
 // RESET DATA - DON'T CHANGE
 // ==============================================
 resetData(dataToReset) {
-  axios.get('/api/' + dataToReset + '/reset')
+  axios.get('https://joes-autos.herokuapp.com/api/' + dataToReset + '/reset')
     .then( res => {
       if (dataToReset == 'vehicles') {
         this.setState({
