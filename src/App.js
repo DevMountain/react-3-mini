@@ -146,6 +146,7 @@ nameSearch() {
 
 byYear() {
   let year = this.refs.year.value;
+  console.log(year)
   // axios (GET)
   // setState with response -> vehiclesToDisplay
   axios.get(`${this.state.baseUrl}/api/vehicles?year=${year}`)
@@ -259,11 +260,11 @@ resetData(dataToReset) {
             placeholder='Search by name' 
             type="text"
             ref='searchLetters'/>
-           <input 
+           <input
             ref='year'
             className='btn-sp'
             type='number'
-            placeholder='Year'/> 
+            placeholder='Year'/>
           <button
             onClick={ this.byYear }
             className='btn-inp'>
