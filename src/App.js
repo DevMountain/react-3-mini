@@ -90,7 +90,7 @@ nameSearch() {
 }
 
 byYear() {
-  let year = this.refs.year.value;
+  let year = this.refs.searchYear.value;
   // axios (GET)
   // setState with response -> vehiclesToDisplay
 }
@@ -199,7 +199,7 @@ resetData(dataToReset) {
             type="text"
             ref='searchLetters'/>
            <input 
-            ref='year'
+            ref='searchYear'
             className='btn-sp'
             type='number'
             placeholder='Year'/> 
