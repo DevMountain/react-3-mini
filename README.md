@@ -39,7 +39,7 @@ Bonus - notifications:
 
 <hr><hr>  
 
-## Joe's Auto API Docs:
+## Main Street Auto's API Docs:
 
   - Base url: https://joes-autos.herokuapp.com
 
