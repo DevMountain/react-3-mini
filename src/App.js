@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './joesAuto.svg';
+import logo from './mainStreetAuto.svg';
 import axios from 'axios';
 import './App.css';
 
@@ -103,11 +103,11 @@ resetData(dataToReset) {
     .then( res => {
       if (dataToReset == 'vehicles') {
         this.setState({
-          vehiclesToDisplay: res.data
+          vehiclesToDisplay: res.data.vehicles
         })
       } else {
         this.setState({
-          buyersToDisplay: res.data
+          buyersToDisplay: res.data.buyers
         })
       }
     })
@@ -158,8 +158,8 @@ resetData(dataToReset) {
         <ToastContainer store={ ToastStore } />
         <header className='header'>
          <img src={logo} alt=""/>
-         <button className="header-btn1 btn">Reset Vehicles</button>
-         <button className='header-btn2 btn'>Reset Buyers</button>
+         <button className="header-btn1 btn" onClick={()=>this.resetData('vehicles')}>Reset Vehicles</button>
+         <button className='header-btn2 btn' onClick={()=>this.resetData('buyers')}>Reset Buyers</button>
         </header>
         <div className='btn-container'>
           <button
