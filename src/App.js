@@ -27,6 +27,7 @@ class App extends Component {
     this.nameSearch = this.nameSearch.bind(this);
     this.resetData = this.resetData.bind(this);
     this.byYear = this.byYear.bind(this);
+    this.deleteBuyer = this.deleteBuyer.bind(this);
   }
 
   getVehicles() {
@@ -56,7 +57,7 @@ class App extends Component {
     // setState with response -> vehiclesToDisplay
   }
 
-  updatePrice(priceChange) {
+  updatePrice(priceChange, id) {
     // axios (PUT)
     // setState with response -> vehiclesToDisplay
   }
@@ -81,6 +82,10 @@ addBuyer() {
   }
   //axios (POST)
   // setState with response -> buyersToDisplay
+}
+
+deleteBuyer(id){
+  //setState with response -> buyersToDisplay
 }
 
 nameSearch() {
@@ -126,11 +131,11 @@ resetData(dataToReset) {
           <p>Price: { v.price }</p>
           <button
             className='btn btn-sp'
-            onClick={ () => this.updatePrice('up') }
+            onClick={ () => this.updatePrice('up', v.id) }
             >Increase Price</button>
           <button
             className='btn btn-sp'
-            onClick={ () => this.updatePrice('down') }
+            onClick={ () => this.updatePrice('down', v.id) }
             >Decrease Price</button>  
           <button 
             className='btn btn-sp'
@@ -147,7 +152,7 @@ resetData(dataToReset) {
           <p>Name: {person.name}</p>
           <p>Phone: {person.phone}</p>
           <p>Address: {person.address}</p>
-          <button className='btn'>No longer interested</button>
+          <button className='btn' onClick={() => {this.deleteBuyer(person.id)}}>No longer interested</button>
           <hr className='hr' />
         </div> 
       )

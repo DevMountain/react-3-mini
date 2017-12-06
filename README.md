@@ -77,7 +77,7 @@ Bonus - notifications:
 #### PUT
 
 ##### Increase/decrease price of car by $1000 
-- Request url: base url + '/api/vehicle/:id/:change'
+- Request url: base url + '/api/vehicles/:id/:change'
   - `id` is the id of the vehicle
   - Value of `change` needs to be either `up` or `down`.
 - Response: updated vehicles array
