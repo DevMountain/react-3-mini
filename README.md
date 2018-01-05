@@ -9,7 +9,7 @@ This project is also incorporating toast notifications to help visualize success
 * Success: `ToastStore.success('Success!', 3000);`
 * Failure: `ToastStore.error('Failed!', 3000);`
 
-# Setup
+## Setup
 
 1. `Fork` and `clone` this repository.
 2. `cd` into the project directory.
