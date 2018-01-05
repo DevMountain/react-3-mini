@@ -1,43 +1,43 @@
-# HTTP-mini
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
-1. Fork, clone, and then `cd` into directory.
-2. Run `npm install`.
-3. Below is the documentation for a used car sales business' API. Read through the api docs so that you know what types of requests you can make, and what responses you can expect. 
+# Project Summary
 
-* Start with setting up **_1_** get, put, post, and delete request. If you have time or need more practice with http requests, set up the rest of the app.
+In this project, we'll introduce how to use axios inside of a React project. We'll cover full CRUD in this project ( GET, PUT, POST, DELETE ) and also cover how to use .then(). Majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. Try to focus only on how we're interacting with the API using axios.
 
-NOTE: Your focus is on making the http requests using axios. You will notice that most of the app is already set up for you.
+This project is also incorporating toast notifications to help visualize successful or failed API requests. Therefore when building out our axios requests, we will add an additional line of code for successful and failed API requests.
 
-REMINDER: It is hard to dive into an existing code base and understand exactly what is going on. This project's focus is to help you learn how to interact with an API through http requests. It is not neccessary to understand each peice of this react app.
+* Success: `ToastStore.success('Success!', 3000);`
+* Failure: `ToastStore.error('Failed!', 3000);`
 
-FOCUS:
-  - How to make an http request using axios.
-  - Understanding GET, PUT, POST, and DELETE
-  - Using and understanding `.then()`
+# Setup
 
-Bonus - notifications:
-- This app is using a library called 'react-toasts'. You can have a toast show up in the corner to let you know if your http requests were successful or not.
-- i.e.:
-  ```
-  axios.get('/api/vehicles')
-  .then( res => {
-    if (res.status === 200) {
-      ToastStore.success('Success!', 3000)
-    } else {
-      ToastStore.error('Uh, oh! We got code issues!', 3000)
-    }
-  })
-  
-  ```
-  success(message, timer) : green toast
+1. `Fork` and `clone` this repository.
+2. `cd` into the project directory.
+3. Run `npm install`.
+4. Run `npm start`.
 
-  info(message, timer) : white toast
+## Step 1
 
-  warning(message, timer) : yellow toast
+GET
 
-  error(message, timer) : red toast
+## Step 2
 
-<hr><hr>  
+PUT
+
+## Step 3
+
+POST
+
+## Step 4
+
+DELETE
+
+## Black Diamond
+
+Complete the remaining methods..
+
+
+
 
 ## Main Street Auto's API Docs:
 
@@ -117,5 +117,14 @@ Bonus - notifications:
   - `id` param is the id of the buyer getting removed
 - Response: updated buyers array
 
+## Contributions
 
+If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
+## Copyright
+
+© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+
+<p align="center">
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
+</p>
