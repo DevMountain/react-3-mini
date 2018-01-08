@@ -6,7 +6,7 @@
     "axios": "^0.16.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-toasts": "^1.0.6"
+    "react-toastify": "^3.2.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"

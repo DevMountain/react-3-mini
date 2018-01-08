@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 // Toast notification dependencies
-import { ToastContainer, ToastStore } from 'react-toasts';
+import { ToastContainer, toast } from 'react-toastify';
 
 class App extends Component {
   constructor( props ) {
