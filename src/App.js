@@ -40,8 +40,9 @@ class App extends Component {
   }
 
   sellCar( id ) {
-    // axios (DELETE)
-    // setState with response -> vehiclesToDisplay
+    axios.delete(`https://joes-autos.herokuapp.com/api/vehicles/${ id }`).then( results => {
+      this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+    });
   }
 
   filterByMake() {

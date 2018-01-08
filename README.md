@@ -97,12 +97,37 @@ In this step, we'll make use of `axios` to get the `Add vehicle` button to work.
 
 ## Step 4
 
-DELETE
+### Summary
+
+In this step, we'll make use of `axios` to get the `SOLD!` button to work. When deleting data on a server you should always use a DELETE request.
+
+### Instructions
+
+* Open `./src/App.js`.
+* Locate the pre-made `sellCar` method.
+* Using `axios` and the API documentation make a DELETE request to delete ( "sell" ) a vehicle.
+* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
+  * Hint: Inspect the returned data object.
+
+### Solution
+
+<details>
+
+<summary> <code> ./src/App.js ( sellCar method ) </code> </summary>
+
+```js
+sellCar( id ) {
+  axios.delete(`https://joes-autos.herokuapp.com/api/vehicles/${ id }`).then( results => {
+    this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+  });
+}
+```
+
+</details>
 
 ## Black Diamond
 
-Complete the remaining methods..
-
+If there is extra time during the lecture, try to complete the remaining methods. The remaining methods can also be used as `axios` and `CRUD` practice on your own time.
 
 ## Contributions
 
