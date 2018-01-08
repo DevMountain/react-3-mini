@@ -13,7 +13,7 @@ This project is also incorporating toast notifications to help visualize success
 
 <a href="https://devmountain.github.io/react-3-mini/">Click Me!</a>
 
-<img src="https://github.com/DevMountain/react-3-mini/blob/solution/solution/1.png" />
+<img src="https://github.com/DevMountain/react-3-mini/blob/solution/assets/1.png" />
 
 ## Setup
 
