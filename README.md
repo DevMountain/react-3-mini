@@ -2,9 +2,9 @@
 
 # Project Summary
 
-In this project, we'll introduce how to use axios inside of a React project. We'll cover full CRUD in this project ( GET, PUT, POST, DELETE ) and also cover how to use .then(). Majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. Try to focus only on how we're interacting with the API using axios.
+In this project, we'll introduce how to use `axios` inside of a React project. We'll cover full CRUD in this project ( GET, PUT, POST, DELETE ) and also cover how to use .then(). Majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. Try to focus only on how we're interacting with the API using `axios`.
 
-This project is also incorporating toast notifications to help visualize successful or failed API requests. Therefore when building out our axios requests, we will add an additional line of code for successful and failed API requests.
+This project is also incorporating toast notifications to help visualize successful or failed API requests. Therefore when building out our `axios` requests, we will add an additional line of code for successful and failed API requests.
 
 * Success: `ToastStore.success('Success!', 3000);`
 * Failure: `ToastStore.error('Failed!', 3000);`
@@ -26,7 +26,7 @@ Please reference this API documentation when completing the project steps.
 
 ### Summary
 
-In this step, we'll make use of axios to get the "Get All Vehicles" button to work. When fetching data from a server you should always use a GET request.
+In this step, we'll make use of `axios` to get the `Get All Vehicles` button to work. When fetching data from a server you should always use a GET request.
 
 ### Instructions
 
@@ -55,14 +55,14 @@ getVehicles() {
 ## Step 2
 
 ### Summary
-  In this step, we'll make use of axios to get the "Increase Price" and "Decrease Price" buttons to work. When modifying/updating data on a server you always use a PUT request.
+  In this step, we'll make use of `axios` to get the `Increase Price` and `Decrease Price` buttons to work. When modifying/updating data on a server you always use a PUT request.
 
 ### Instructions
 
 * Open `./src/App.js`.
 * Locate the pre-made `updatePrice` method.
 * Using `axios` and the API documentation make a PUT request to either increase or decrease the price.
-* When the request returns the data, use `this.setState()` to update the values of `vehiclesToDisplay`.
+* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
   * Hint: Inspect the returned data object.
 
 ### Solution
@@ -83,7 +83,17 @@ updatePrice( priceChange, id ) {
 
 ## Step 3
 
-POST
+### Summary
+
+In this step, we'll make use of `axios` to get the `Add vehicle` button to work. When creating new data on a server you should always use a POST request.
+
+### Instructions
+
+* Open `./src/App.js`.
+* Locate the pre-made `addCar` method.
+* Using `axios` and the API documentation make a POST request to create a new vehicle.
+* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
+  * Hint: Inspect the returned data object.
 
 ## Step 4
 
