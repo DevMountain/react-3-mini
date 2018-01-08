@@ -49,9 +49,7 @@ getVehicles() {
   axios.get('https://joes-autos.herokuapp.com/api/vehicles').then( results => {
     toast.success("Successfully got Vehicles.");
     this.setState({ 'vehiclesToDisplay': results.data });
-  }).catch( () => {
-    toast.error("Failed at fetching Vehicles");
-  });
+  }).catch( () => toast.error("Failed at fetching Vehicles") );
 }
 ```
 
@@ -82,9 +80,7 @@ updatePrice( priceChange, id ) {
   axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${ id }/${ priceChange }`).then( results => {
     toast.success("Successfully updated price.");
     this.setState({ 'vehiclesToDisplay': results.data.vehicles });
-  }).catch( () => {
-    toast.error("Failed at updating price");
-  });
+  }).catch( () => toast.error("Failed at updating price") );
 }
 ```
 
@@ -101,8 +97,34 @@ In this step, we'll make use of `axios` to get the `Add vehicle` button to work.
 * Open `./src/App.js`.
 * Locate the pre-made `addCar` method.
 * Using `axios` and the API documentation make a POST request to create a new vehicle.
-* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
-  * Hint: Inspect the returned data object.
+  * If the request is successful, use `this.setState()` to update the value of `vehiclesToDisplay` and use `toast.success`.
+    * Hint: Inspect the returned data object.
+  * If the request is unsuccessful, use `toast.error`.
+
+### Solution
+
+<details>
+
+<summary> <code> ./src/App.js ( addCar method ) </code> </summary>
+
+```js
+addCar() {
+  let newCar = {
+    make: this.refs.make.value,
+    model: this.refs.model.value,
+    color: this.refs.color.value,
+    year: this.refs.year.value,
+    price: this.refs.price.value
+  };
+
+  axios.post('https://joes-autos.herokuapp.com/api/vehicles', newCar).then( results => {
+    toast.success("Successfully added vehicle.");
+    this.setState({ vehiclesToDisplay: results.data.vehicles });
+  }).catch( () => toast.error('Failed at adding new vehicle.') );
+}
+```
+
+</details>
 
 ## Step 4
 
