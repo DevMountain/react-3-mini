@@ -64,7 +64,10 @@ class App extends Component {
 
   updatePrice( priceChange, id ) {
     axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${ id }/${ priceChange }`).then( results => {
+      toast.success("Successfully updated price.");
       this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+    }).catch( () => {
+      toast.error("Failed at updating price");
     });
   }
 

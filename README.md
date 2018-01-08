@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project, we'll introduce how to use `axios` inside of a React project. We'll cover full CRUD in this project ( GET, PUT, POST, DELETE ) and also cover how to use .then(). Majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. Try to focus only on how we're interacting with the API using `axios`.
+In this project, we'll introduce how to use `axios` inside of a React project. We'll cover full `CRUD` in this project ( GET, PUT, POST, DELETE ) and also cover how to use .then(). Majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. Try to focus only on how we're interacting with the API using `axios`.
 
 This project is also incorporating toast notifications to help visualize successful or failed API requests. Therefore when building out our `axios` requests, we will add an additional line of code for successful and failed API requests.
 
@@ -67,8 +67,9 @@ getVehicles() {
 * Open `./src/App.js`.
 * Locate the pre-made `updatePrice` method.
 * Using `axios` and the API documentation make a PUT request to either increase or decrease the price.
-* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
-  * Hint: Inspect the returned data object.
+  * If the request is successful, use `this.setState()` to update the value of `vehiclesToDisplay` and use `toast.success`.
+    * Hint: Inspect the returned data object.
+  * If the request is unsuccessful, use `toast.error`.
 
 ### Solution
 
@@ -79,7 +80,10 @@ getVehicles() {
 ```js
 updatePrice( priceChange, id ) {
   axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${ id }/${ priceChange }`).then( results => {
+    toast.success("Successfully updated price.");
     this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+  }).catch( () => {
+    toast.error("Failed at updating price");
   });
 }
 ```
