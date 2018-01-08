@@ -59,8 +59,9 @@ class App extends Component {
   }
 
   updatePrice( priceChange, id ) {
-    // axios (PUT)
-    // setState with response -> vehiclesToDisplay
+    axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${ id }/${ priceChange }`).then( results => {
+      this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+    });
   }
 
   addCar() {

@@ -34,6 +34,7 @@ In this step, we'll make use of axios to get the "Get All Vehicles" button to wo
 * Locate the pre-made `getVehicles` method.
 * Using `axios` and the API documentation make a GET request to receive all the vehicles.
 * When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
+  * Hint: Inspect the returned data object.
 
 ### Solution
 
@@ -60,6 +61,25 @@ getVehicles() {
 
 * Open `./src/App.js`.
 * Locate the pre-made `updatePrice` method.
+* Using `axios` and the API documentation make a PUT request to either increase or decrease the price.
+* When the request returns the data, use `this.setState()` to update the values of `vehiclesToDisplay`.
+  * Hint: Inspect the returned data object.
+
+### Solution
+
+<details>
+
+<summary> <code> ./src/App.js ( updatePrice method ) </code> </summary>
+
+```js
+updatePrice( priceChange, id ) {
+  axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${ id }/${ priceChange }`).then( results => {
+    this.setState({ 'vehiclesToDisplay': results.data.vehicles });
+  });
+}
+```
+
+</details>
 
 ## Step 3
 
