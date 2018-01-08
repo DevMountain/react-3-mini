@@ -24,11 +24,42 @@ Please reference this API documentation when completing the project steps.
 
 ## Step 1
 
-GET
+### Summary
+
+In this step, we'll make use of axios to get the "Get All Vehicles" button to work. When fetching data from a server you should always use a GET request.
+
+### Instructions
+
+* Open `./src/App.js`.
+* Locate the pre-made `getVehicles` method.
+* Using `axios` and the API documentation make a GET request to receive all the vehicles.
+* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
+
+### Solution
+
+<details>
+
+<summary> <code> ./src/App.js ( getVehicles method ) </code> </summary>
+
+```js
+getVehicles() {
+  axios.get('https://joes-autos.herokuapp.com/api/vehicles').then( results => {
+    this.setState({ 'vehiclesToDisplay': results.data });
+  });
+}
+```
+
+</details>
 
 ## Step 2
 
-PUT
+### Summary
+  In this step, we'll make use of axios to get the "Increase Price" and "Decrease Price" buttons to work. When modifying/updating data on a server you always use a PUT request.
+
+### Instructions
+
+* Open `./src/App.js`.
+* Locate the pre-made `updatePrice` method.
 
 ## Step 3
 
