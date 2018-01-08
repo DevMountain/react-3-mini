@@ -166,8 +166,8 @@ class App extends Component {
 
     return (
       <div className=''>
-        <ToastContainer store={ ToastStore } />
-
+        <ToastContainer />
+        
         <header className='header'>
           <img src={ logo } alt=""/>
 
