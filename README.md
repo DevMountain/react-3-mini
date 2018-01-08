@@ -9,6 +9,12 @@ This project is also incorporating toast notifications to help visualize success
 * Success: `toast.success("Success!");`
 * Failure: `toast.error("Failed!");`
 
+# Live Example
+
+<a href="https://devmountain.github.io/react-3-mini/">Click Me!</a>
+
+<img src="https://github.com/DevMountain/react-3-mini/blob/solution/solution/1.png" />
+
 ## Setup
 
 1. `Fork` and `clone` this repository.
