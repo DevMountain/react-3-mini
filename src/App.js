@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 // Toast notification dependencies
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, style } from 'react-toastify';
 
 class App extends Component {
   constructor( props ) {
@@ -32,6 +32,8 @@ class App extends Component {
     axios.get('https://joes-autos.herokuapp.com/api/vehicles').then( results => {
       toast.success("Successfully got Vehicles.");
       this.setState({ 'vehiclesToDisplay': results.data });
+    }).catch( () => {
+      toast.error("Failed at fetching Vehicles");
     });
   }
 

@@ -33,8 +33,10 @@ In this step, we'll make use of `axios` to get the `Get All Vehicles` button to 
 * Open `./src/App.js`.
 * Locate the pre-made `getVehicles` method.
 * Using `axios` and the API documentation make a GET request to receive all the vehicles.
-* When the request returns the data, use `this.setState()` to update the value of `vehiclesToDisplay`.
-  * Hint: Inspect the returned data object.
+  * If the request is successful, use `this.setState()` to update the value of `vehiclesToDisplay` and use `toast.success`.
+    * Hint: Inspect the returned data object.
+  * If the request is unsuccessful, use `toast.error`.
+
 
 ### Solution
 
@@ -45,7 +47,10 @@ In this step, we'll make use of `axios` to get the `Get All Vehicles` button to 
 ```js
 getVehicles() {
   axios.get('https://joes-autos.herokuapp.com/api/vehicles').then( results => {
+    toast.success("Successfully got Vehicles.");
     this.setState({ 'vehiclesToDisplay': results.data });
+  }).catch( () => {
+    toast.error("Failed at fetching Vehicles");
   });
 }
 ```
