@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 // Toast notification dependencies
-import { ToastContainer, ToastStore } from 'react-toasts';
+import { ToastContainer, toast } from 'react-toastify';
 
 class App extends Component {
   constructor( props ) {
@@ -30,6 +30,7 @@ class App extends Component {
 
   getVehicles() {
     axios.get('https://joes-autos.herokuapp.com/api/vehicles').then( results => {
+      toast.success("Successfully got Vehicles.");
       this.setState({ 'vehiclesToDisplay': results.data });
     });
   }
@@ -169,8 +170,7 @@ class App extends Component {
 
     return (
       <div className=''>
-        <ToastContainer store={ ToastStore } />
-
+        <ToastContainer />
         <header className='header'>
           <img src={ logo } alt=""/>
 

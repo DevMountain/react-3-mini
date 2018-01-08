@@ -6,8 +6,8 @@ In this project, we'll introduce how to use `axios` inside of a React project. W
 
 This project is also incorporating toast notifications to help visualize successful or failed API requests. Therefore when building out our `axios` requests, we will add an additional line of code for successful and failed API requests.
 
-* Success: `ToastStore.success('Success!', 3000);`
-* Failure: `ToastStore.error('Failed!', 3000);`
+* Success: `toast.success("Success!");`
+* Failure: `toast.error("Failed!");`
 
 ## Setup
 
