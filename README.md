@@ -21,6 +21,8 @@ This project is also incorporating toast notifications to help visualize success
 2. `cd` into the project directory.
 3. Run `npm install`.
 4. Run `npm start`.
+5. In a seperate terminal, `cd` into the project directory.
+6. Run `npm run api` to start the 'backend' api.
 
 ## API Documentation
 
