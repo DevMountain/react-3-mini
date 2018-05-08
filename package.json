@@ -15,7 +15,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "api": "json-server --watch db.json --port 3005 --routes routes.json --delay 500"
+    "eject": "react-scripts eject"
   }
 }
