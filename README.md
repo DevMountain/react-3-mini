@@ -17,12 +17,11 @@ This project is also incorporating toast notifications to help visualize success
 
 ## Setup
 
-1. `Fork` and `clone` this repository.
-2. `cd` into the project directory.
-3. Run `npm install`.
-4. Run `npm start`.
-5. In a seperate terminal, `cd` into the project directory.
-6. Run `npm run api` to start the 'backend' api.
+1.  `Fork` and `clone` this repository.
+2.  `cd` into the project directory.
+3.  Run `npm install`.
+4.  Run `npm start`.
+5.  In a seperate terminal, `cd` into the project directory.
 
 ## API Documentation
 
@@ -45,7 +44,6 @@ In this step, we'll make use of `axios` to get the `Get All Vehicles` button to 
     * Hint: Inspect the returned data object.
   * If the request is unsuccessful, use `toast.error`.
 
-
 ### Solution
 
 <details>
@@ -66,7 +64,8 @@ getVehicles() {
 ## Step 2
 
 ### Summary
-  In this step, we'll make use of `axios` to get the `Increase Price` and `Decrease Price` buttons to work. When modifying/updating data on a server you always use a PUT request.
+
+In this step, we'll make use of `axios` to get the `Increase Price` and `Decrease Price` buttons to work. When modifying/updating data on a server you always use a PUT request.
 
 ### Instructions
 
