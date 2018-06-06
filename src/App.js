@@ -174,7 +174,7 @@ class App extends Component {
     });
 
     return (
-      <div className="">
+      <div>
         <ToastContainer />
 
         <header className="header">
@@ -304,8 +304,8 @@ class App extends Component {
             type="number"
             className="btn-sp"
             placeholder="price"
-            ref={color => {
-              this.color = color;
+            ref={price => {
+              this.price = price;
             }}
           />
 
