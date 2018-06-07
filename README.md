@@ -117,11 +117,11 @@ In this step, we'll make use of `axios` to get the `Add vehicle` button to work.
 ```js
 addCar() {
   let newCar = {
-    make: this.refs.make.value,
-    model: this.refs.model.value,
-    color: this.refs.color.value,
-    year: this.refs.year.value,
-    price: this.refs.price.value
+    make: this.make.value,
+    model: this.model.value,
+    color: this.color.value,
+    year: this.year.value,
+    price: this.price.value
   };
 
   axios.post('https://joes-autos.herokuapp.com/api/vehicles', newCar).then( results => {
