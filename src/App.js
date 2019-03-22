@@ -29,9 +29,6 @@ class App extends Component {
   }
 
   getVehicles() {
-    // axios (GET)
-    // setState with response -> vehiclesToDisplay
-
     axios.get('https://joes-autos.herokuapp.com/api/vehicles')
       .then(response => { 
         this.setState({
@@ -42,8 +39,6 @@ class App extends Component {
   }
 
   getPotentialBuyers() {
-    // axios (GET)
-    // setState with response -> buyersToDisplay
 
     axios.get('https://joes-autos.herokuapp.com/api/buyers')
       .then(response => { 
@@ -51,14 +46,9 @@ class App extends Component {
           buyersToDisplay: response.data
         })
       })
-
-
-
   }
 
   sellCar(id) {
-    // axios (DELETE)
-    // setState with response -> vehiclesToDisplay
 
     axios.delete(`https://joes-autos.herokuapp.com/api/vehicles/${id}`)
       .then(response => { 
@@ -72,13 +62,17 @@ class App extends Component {
   filterByMake() {
     let make = this.selectedMake.value;
 
-    // axios (GET)
-    // setState with response -> vehiclesToDisplay
+    axios.get('https://joes-autos.herokuapp.com/api/vehicles')
+      .then(response => {
+        console.log(response.data.filter(car => car.make == make))
+        this.setState({
+          vehiclesToDisplay: response.data.filter(car => car.make == make)
+        })
+      })
   }
 
   filterByColor() {
     let color = this.selectedColor.value;
-console.log(color)
     axios.get('https://joes-autos.herokuapp.com/api/vehicles')
       .then(response => { 
         console.log(response.data.filter(car => car.color == color))
@@ -86,13 +80,9 @@ console.log(color)
           vehiclesToDisplay: response.data.filter(car => car.color == color)
         })
       })
-
-  
   }
 
   updatePrice(priceChange, id) {
-    // axios (PUT)
-    // setState with response -> vehiclesToDisplay
 console.log(priceChange)
     axios.put(`https://joes-autos.herokuapp.com/api/vehicles/${id}/${priceChange}`)
       .then(response => { 
@@ -112,9 +102,6 @@ console.log(priceChange)
       price: this.price.value
     };
 
-    // axios (POST)
-    // setState with response -> vehiclesToDisplay
-
     axios.post('https://joes-autos.herokuapp.com/api/vehicles/', newCar)
       .then(res => {
         toast.success('AYyyyyyyyy')
@@ -131,9 +118,6 @@ console.log(priceChange)
       address: this.address.value
     };
 
-    //axios (POST)
-    // setState with response -> buyersToDisplay
-
         axios.post('https://joes-autos.herokuapp.com/api/buyers', newBuyer)
           .then(response => {
             this.setState({
@@ -148,18 +132,24 @@ console.log(priceChange)
   }
 
   deleteBuyer(id) {
-    // axios (DELETE)
-    //setState with response -> buyersToDisplay
-
-    // axios.delete()
+    axios.delete(`https://joes-autos.herokuapp.com/api/buyers/${id}`)
+      .then(response => { 
+        this.setState({
+          buyersToDisplay: response.data.buyers
+        })
+      })
 
   }
 
   nameSearch() {
     let searchLetters = this.searchLetters.value;
 
-    // axios (GET)
-    // setState with response -> buyersToDisplay
+    axios.get('https://joes-autos.herokuapp.com/api/buyers')
+      .then(response => { 
+        this.setState({
+          buyersToDisplay: response.data.filter(buyer => buyer.name.indexOf(searchLetters) > -1)
+        })
+      })
   }
 
   byYear() {
@@ -303,12 +293,12 @@ console.log(priceChange)
             <option value="" disabled>
               Filter by color
             </option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
             <option value="Purple">Purple</option>
-            <option value="indigo">Indigo</option>
-            <option value="violet">Violet</option>
-            <option value="teal">Teal</option>
+            <option value="Indigo">Indigo</option>
+            <option value="Violet">Violet</option>
+            <option value="Teal">Teal</option>
           </select>
 
           <input
