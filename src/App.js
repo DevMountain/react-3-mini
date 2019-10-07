@@ -122,12 +122,22 @@ class App extends Component {
   render() {
     const vehicles = this.state.vehiclesToDisplay.map(v => {
       return (
-        <div key={v.id}>
-          <p>Make: {v.make}</p>
-          <p>Model: {v.model}</p>
-          <p>Year: {v.year}</p>
-          <p>Color: {v.color}</p>
-          <p>Price: {v.price}</p>
+        <div className="vehicle" key={v.id}>
+          <p className="vehicle__desc">
+            <strong>Make:</strong> {v.make}
+          </p>
+          <p className="vehicle__desc">
+            <strong>Model:</strong> {v.model}
+          </p>
+          <p className="vehicle__desc">
+            <strong>Year:</strong> {v.year}
+          </p>
+          <p className="vehicle__desc">
+            <strong>Color:</strong> {v.color}
+          </p>
+          <p className="vehicle__desc">
+            <strong>Price:</strong> {v.price}
+          </p>
 
           <button
             className="btn btn-sp"
@@ -146,18 +156,22 @@ class App extends Component {
           <button className="btn btn-sp" onClick={() => this.sellCar(v.id)}>
             SOLD!
           </button>
-
-          <hr className="hr" />
         </div>
       );
     });
 
     const buyers = this.state.buyersToDisplay.map(person => {
       return (
-        <div key={person.id}>
-          <p>Name: {person.name}</p>
-          <p>Phone: {person.phone}</p>
-          <p>Address: {person.address}</p>
+        <div className="buyer" key={person.id}>
+          <p className="buyer__desc">
+            <strong>Name:</strong> {person.name}
+          </p>
+          <p className="buyer__desc">
+            <strong>Phone:</strong> {person.phone}
+          </p>
+          <p className="buyer__desc">
+            <strong>Address:</strong> {person.address}
+          </p>
 
           <button
             className="btn"
@@ -165,10 +179,8 @@ class App extends Component {
               this.deleteBuyer(person.id);
             }}
           >
-            No longer interested
+            No Longer Interested
           </button>
-
-          <hr className="hr" />
         </div>
       );
     });
@@ -272,85 +284,85 @@ class App extends Component {
 
         <p className="form-wrap">
           <input
-            className="btn-sp"
-            placeholder="make"
+            className="input"
+            placeholder="Make"
             ref={make => {
               this.make = make;
             }}
           />
           <input
-            className="btn-sp"
-            placeholder="model"
+            className="input"
+            placeholder="Model"
             ref={model => {
               this.model = model;
             }}
           />
           <input
             type="number"
-            className="btn-sp"
-            placeholder="year"
+            className="input"
+            placeholder="Year"
             ref={year => {
               this.year = year;
             }}
           />
           <input
-            className="btn-sp"
-            placeholder="color"
+            className="input"
+            placeholder="Color"
             ref={color => {
               this.color = color;
             }}
           />
           <input
             type="number"
-            className="btn-sp"
-            placeholder="price"
+            className="input"
+            placeholder="Price"
             ref={price => {
               this.price = price;
             }}
           />
 
           <button className="btn-sp btn" onClick={this.addCar}>
-            Add vehicle
+            Add Vehicle
           </button>
         </p>
 
         <p className="form-wrap">
           <input
-            className="btn-sp"
-            placeholder="name"
+            className="input"
+            placeholder="Name"
             ref={name => {
               this.name = name;
             }}
           />
           <input
-            className="btn-sp"
-            placeholder="phone"
+            className="input"
+            placeholder="Phone"
             ref={phone => {
               this.phone = phone;
             }}
           />
           <input
-            className="btn-sp"
-            placeholder="address"
+            className="input"
+            placeholder="Address"
             ref={address => {
               this.address = address;
             }}
           />
 
           <button onClick={this.addBuyer} className="btn-sp btn">
-            Add buyer
+            Add Buyer
           </button>
         </p>
 
         <main className="main-wrapper">
           <section className="info-box">
-            <h3>Inventory</h3>
+            <h3 className="info-box__title">Inventory</h3>
 
             {vehicles}
           </section>
 
           <section className="info-box">
-            <h3>Potential Buyers</h3>
+            <h3 className="info-box__title">Potential Buyers</h3>
 
             {buyers}
           </section>
