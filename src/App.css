@@ -1,80 +1,122 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: inherit;
   color: #323231;
 }
+
 .header {
   display: flex;
   justify-content: center;
   margin: 25px 0px;
 }
+
 .main-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
+
 .btn-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .info-box {
-  width: 45%;
+  flex: 1;
   text-align: center;
+  margin: 0 2rem;
 }
-.hr {
-  width: 200px;
+
+.info-box__title {
+  font-size: 3rem;
 }
 
 .btn-sp {
   margin: 0px 5px;
+  font-size: 2rem;
 }
+
 .form-wrap {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .header-btn1 {
   position: absolute;
   top: 10px;
-  right: 120px;
+  right: 145px;
 }
+
 .header-btn2 {
   position: absolute;
   top: 10px;
   right: 20px;
 }
+
 .btn {
-  height: 25px;
-  padding: 0px 10px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
-  background: #E0E1E2;
+  background: #e0e1e2;
   color: #323231;
-  transition: .2s;
+  transition: 0.2s;
+  font-size: 2rem;
 }
+
 .btn:hover {
   cursor: pointer;
-  background: #CACBCD;
+  background: #cacbcd;
 }
+
 input {
   border-radius: 5px;
   border: 1px solid #323231;
-  padding-left: 5px;
+  font-size: 2rem;
+  padding: 5px;
+  margin: 0 5px;
 }
+
 h3 {
   color: #323231;
 }
 
 .btn-inp {
-  height: 23px;
-  padding: 0px 10px;
+  height: 37px;
+  padding: 10px;
   border-radius: 0px 5px 5px 0px;
   border: none;
   border-left: 1px solid black;
-  background: #E0E1E2;
+  background: #e0e1e2;
   color: #323231;
-  transition: .2s;
+  transition: 0.2s;
   margin-top: 1px;
   margin-left: -41px;
   cursor: pointer;
 }
 
+.btn-inp:hover {
+  background: #cacbcd;
+}
+
+.vehicle {
+  padding: 2rem;
+  border-radius: 5px;
+  border: solid 1px black;
+  margin: 2rem 0;
+}
+
+.vehicle__desc {
+  font-size: 2rem;
+}
+
+.buyer {
+  padding: 2rem;
+  border-radius: 5px;
+  border: solid 1px black;
+  margin: 2rem 0;
+}
+
+.buyer__desc {
+  font-size: 2rem;
+}
