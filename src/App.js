@@ -108,7 +108,7 @@ class App extends Component {
   // Do not edit the code below
   resetData(dataToReset) {
     axios
-      .get('https://joes-autos.herokuapp.com/api/' + dataToReset + '/reset')
+      .get(`https://joes-autos.herokuapp.com/api/${dataToReset}/reset`)
       .then(res => {
         if (dataToReset === 'vehicles') {
           this.setState({ vehiclesToDisplay: res.data.vehicles });
