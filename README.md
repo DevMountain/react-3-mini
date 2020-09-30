@@ -15,7 +15,7 @@ To help you understand wether or not you API requests are failed or successful, 
 
 <img src="https://github.com/DevMountain/react-3-mini/blob/solution/assets/1.png" />
 
-## Setup
+## Setup Procedure
 
 1.  `Fork` and `clone` this repository.
 2.  `cd` into the project directory.
@@ -23,7 +23,7 @@ To help you understand wether or not you API requests are failed or successful, 
 4.  Run `npm start`.
 5.  In a seperate terminal, `cd` into the project directory.
 
-## API Documentation
+## API Documentations
 
 https://app.swaggerhub.com/apis/DevMountain/Joes-Auto/1.0.0
 
