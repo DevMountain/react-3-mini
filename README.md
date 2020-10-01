@@ -4,7 +4,7 @@
 
 In this project, we'll introduce `axios` and how to use it inside of a React project. We'll cover full `CRUD` ( GET, PUT, POST, DELETE ) and also cover how to use `.then()`. The majority of the React application will already be built for you. If you're finding it hard to dive into an existing code base and understand exactly what is going on, that's perfectly normal. It's most important to focus only on how we're interacting with the API using `axios`.
 
-To help you understand wether or not you API requests are failed or successful, we've used a UI tool to build in the ability to visualize notifications in the app. The specific style we use is referred to as a "toast" notification. To take advantage of this capability to visualize successful and failed API requests, an additional line of code will need to be added to `axios` requests, examples of which can be found below.
+To help you understand whether or not you API requests are failed or successful, we've used a UI tool to build in the ability to visualize notifications in the app. The specific style we use is referred to as a "toast" notification. To take advantage of this capability to visualize successful and failed API requests, an additional line of code will need to be added to `axios` requests, examples of which can be found below.
 
 * Success: `toast.success("Success!");`
 * Failure: `toast.error("Failed!");`
