@@ -9,7 +9,7 @@
     "react-toastify": "^3.2.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.10"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
